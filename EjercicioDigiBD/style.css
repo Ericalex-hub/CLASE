@@ -1,122 +1,150 @@
-/* Estilos básicos */
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-    color: #333;
-    background-color: #333;
-    height: 100%;
+header{
+    display: flex;
+    justify-content: space-around;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgb(0, 0, 0);
+    border: 2px solid rgba(255, 255, 255, 0.516);
 }
-
-/* Imagen de fondo y contenedor principal */
-body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://example.com/background.jpg') no-repeat center center fixed;
+.sinsub{
+    text-decoration: none;
+    cursor: default;
+    color: inherit;
+}
+body{
     background-size: cover;
+    background-position: center;
+    box-shadow: 20px 20px 10px gray;
+    animation: slider 10s linear infinite;
+}
+@keyframes slider{
+    0% {background-image: url(coche1.jpg);}
+    25% {background-image: url(coche2.jpg);}
+    50% {background-image: url(coche3.jpg);}
+    75% {background-image: url(coche4.jpeg);}
+    100% {background-image: url(coche1.jpg);}
+}
+h1{
+    color: white;
+}
+.titulo{
     display: flex;
     justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #333;
-}
-
-/* Contenedor principal */
-.container {
-    background-color: #333;
-    padding: 40px;
-    margin: 20px;
-    max-width: 900px;
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-    text-align: center;
-}
-
-/* Título y subtítulo */
-.prueba1{
-    text-shadow: 0px 0px 10px turquoise;
-    text-shadow: 0px 0px 20px turquoise;
+    text-shadow: 0px 0px 10px rgb(102, 0, 255);
+    text-shadow: 0px 0px 20px rgb(102, 0, 255);
+    text-shadow: 0px 0px 40px rgb(102, 0, 255);
     font-size: 50px;
-    color:turquoise;
+    color: rgb(0, 0, 0);
 }
-
-h2 {
-    font-size: 24px;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: 300;
+.wrapper{
+    display: flex;
+    width: 98vw;
+    height: 10vh;
+    border-radius: 15px;
+    overflow: hidden;
 }
-
-/* Sección del blog */
-.blog {
-    text-align: left;
-    margin-bottom: 30px;
+.card1{
+    background-image: url(coche1.jpg);
+    background-position: center;
+    background-size: cover;
 }
-
-.blog h3 {
-    font-size: 30px;
-    margin-bottom: 10px;
-    color: #f57c00;
+.card2{
+    background-image: url(coche2.jpg);
+    background-position: center;
+    background-size: cover;
 }
-
-.blog p {
-    font-size: 18px;
-    line-height: 1.7;
-    color: #555;
+.card3{
+    background-image: url(coche3.jpg);
+    background-position: center;
+    background-size: cover;
 }
-
-/* Estilos del formulario de citas */
-.appointment {
-    background-color: #e3f2fd;
-    padding: 30px;
-    border-radius: 10px;
-    margin-bottom: 30px;
+.card4{
+    background-image: url(coche4.jpeg);
+    background-position: center;
+    background-size: cover;
 }
-
-.appointment h3 {
-    font-size: 28px;
-    color: #007bff;
-    margin-bottom: 20px;
-}
-
-.appointment label {
-    font-size: 16px;
-    display: block;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.appointment input, .appointment textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-.appointment input[type="submit"] {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+.card{
+    flex: 1;
+    height: 100%;
+    transition: flex 0.5s ease;
     cursor: pointer;
-    font-size: 18px;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
 }
-
-.appointment input[type="submit"]:hover {
-    background-color: #388e3c;
+.card:hover{
+    flex: 3;
 }
-
-/* Estilo del pie de página */
-footer {
-    background-color: #007bff;
-    color: white;
-    padding: 10px;
+.text-overlay{
+    position: absolute;
+    top: 17%;
+    left: 13%;
+    transform: translate(-50%, -50%);
     text-align: center;
-    border-radius: 0 0 15px 15px;
+    color: white;
+    opacity: 1;
+    transition: opacity 0.5s ease;
 }
-
-footer p {
+.card:hover .text-overlay{
+    opacity: 1;
+}
+.cart{
+    width: 500px;
+    aspect-ratio: 1 / 0.7;
+    border-radius: 9px;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.cart .imagen-box{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: inherit;
+}
+.cart .imagen-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s ease-in-out;
+}
+.cart::after{
+    text-align: center;
+    content: "The lamborgini is a car very fast in the world";
+    position: absolute;
+    inset: 0;
+    border: 2px solid white;
+    border-radius: inherit;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.cart:hover img{
+    filter: grayscale(1) brightness(0.4);
+}
+.cart:hover::after{
+    opacity: 1;
+    inset: 40px;
+}
+.cart .cont{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    opacity: 1;
+    transition: 0,5s ease-in-out;
+}
+.cart:hover .cont p
+.cart:hover .cont h2{
+    transform: translate(0);
+    opacity: 1;
+}
+.cart:hover h2{
     margin: 0;
-    font-size: 14px;
+    font-size: 24px;
+    scale: 0.9;
+}
+.cart:hover .cont p{
+    margin: 5px 0 0;
+    font-size: 16px;
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transform: translateY(20px);
 }
