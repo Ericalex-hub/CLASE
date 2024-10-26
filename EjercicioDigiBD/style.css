@@ -1,11 +1,27 @@
-header{
+.cabecera{
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(30px);
+    border: solid;
+    color: rgb(255, 255, 255);
+    width: 97.vw;
+    height: 3vh;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+.marcas{
     display: flex;
     justify-content: space-around;
     backdrop-filter: blur(30px);
-    box-shadow: 0px 0px 30px rgb(0, 0, 0);
-    border: 2px solid rgba(255, 255, 255, 0.516);
+    border: solid;
+    width: 97.vw;
+    height: 3vh;
+    color: white;
 }
 .sinsub{
+    display: flex;
+    align-items: center;
     text-decoration: none;
     cursor: default;
     color: inherit;
@@ -13,7 +29,6 @@ header{
 body{
     background-size: cover;
     background-position: center;
-    box-shadow: 20px 20px 10px gray;
     animation: slider 10s linear infinite;
 }
 @keyframes slider{
@@ -26,41 +41,58 @@ body{
 h1{
     color: white;
 }
-.titulo{
-    display: flex;
-    justify-content: center;
-    text-shadow: 0px 0px 10px rgb(102, 0, 255);
-    text-shadow: 0px 0px 20px rgb(102, 0, 255);
-    text-shadow: 0px 0px 40px rgb(102, 0, 255);
-    font-size: 50px;
-    color: rgb(0, 0, 0);
-}
 .wrapper{
     display: flex;
-    width: 98vw;
-    height: 10vh;
+    width: 97.vw;
+    height: 50vh;
     border-radius: 15px;
     overflow: hidden;
+    color: red;
 }
 .card1{
     background-image: url(coche1.jpg);
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 .card2{
     background-image: url(coche2.jpg);
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 .card3{
     background-image: url(coche3.jpg);
     background-position: center;
     background-size: cover;
+    position: relative;
 }
 .card4{
     background-image: url(coche4.jpeg);
     background-position: center;
     background-size: cover;
+    position: relative;
+}
+.text h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
+}
+.card1:hover h1{
+    opacity: 1;
+}
+.card2:hover h1{
+    opacity: 1;
+}
+.card3:hover h1{
+    opacity: 1;
+}
+.card4:hover h1{
+    opacity: 1;
 }
 .card{
     flex: 1;
@@ -70,19 +102,6 @@ h1{
 }
 .card:hover{
     flex: 3;
-}
-.text-overlay{
-    position: absolute;
-    top: 17%;
-    left: 13%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    opacity: 1;
-    transition: opacity 0.5s ease;
-}
-.card:hover .text-overlay{
-    opacity: 1;
 }
 .cart{
     width: 500px;
