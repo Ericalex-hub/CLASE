@@ -195,3 +195,13 @@ h1{
     width: 126px;
     height: 146px;
 }
+.nombres{
+    color: white;
+}
+.inicio{
+    background-color: white;
+    border: solid;
+    border-radius: 10px;
+    width: 97.vw;
+    height: 500px;
+}
