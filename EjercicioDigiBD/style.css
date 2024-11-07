@@ -27,11 +27,28 @@
     color: inherit;
 }
 body{
+    background-color: gray;
+/*
     background-size: cover;
     background-position: center;
     animation: slider 10s linear infinite;
 }
 @keyframes slider{
+    0% {background-image: url(coche1.jpg);}
+    25% {background-image: url(coche2.jpg);}
+    50% {background-image: url(coche3.jpg);}
+    75% {background-image: url(coche4.jpeg);}
+    100% {background-image: url(coche1.jpg);}
+}
+*/
+.img-press{
+    width: 97.vw;
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    animation: slider 10s linear infinite;
+}
+@keyframes slider {
     0% {background-image: url(coche1.jpg);}
     25% {background-image: url(coche2.jpg);}
     50% {background-image: url(coche3.jpg);}
@@ -44,7 +61,7 @@ h1{
 .wrapper{
     display: flex;
     width: 97.vw;
-    height: 50vh;
+    height: 25vh;
     border-radius: 15px;
     overflow: hidden;
     color: red;
@@ -77,7 +94,7 @@ h1{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -200%);
+    transform: translate(-50%, -85%);
     text-align: center;
     opacity: 0;
     transition: 0.4s ease-in-out;
