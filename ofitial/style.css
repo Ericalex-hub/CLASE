@@ -1,0 +1,51 @@
+.full-width {
+    width: 100%;
+    background-color: #2C2C2C;
+    padding: 60px 0;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding: 0;
+}
+.luxury {
+    display: flex; justify-content: space-between;
+}
+.luxury-2 {
+    display: flex;
+    justify-content: space-between;
+}
+.car-hub {
+    width: 50%;
+}
+.alignwide {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.title {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin: 0;
+    color: #767575; font-size: 2rem;
+}
+.text-x {
+    width: 50%; font-size: 1rem;
+}
+.description {
+    color: #fff;
+    margin: 0 0 50px;
+    font-size: 1.2rem;
+}
+.cta-button {
+    padding: 15px 30px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+}
+.image {
+    border-radius: 8px;
+}
+.testimonial, .testimonial img {
+    border-radius: 8px;
+}
