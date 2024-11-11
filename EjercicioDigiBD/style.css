@@ -1,6 +1,6 @@
 .cabecera{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     backdrop-filter: blur(30px);
     border: solid;
     color: rgb(255, 255, 255);
@@ -10,9 +10,35 @@
     top: 0;
     z-index: 10;
 }
+.group {
+    display: flex;
+    line-height: 30px;
+    align-items: center;
+    position: relative;
+    max-width: 200px;
+  }
+  .input {
+    width: 100%;
+    height: 25px;
+    line-height: 30px;
+    padding: 0 5rem;
+    padding-left: 3rem;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    background-color: #f8fafc;
+    color: #0d0c22;
+    transition: .5s ease;
+  }
+  .input:focus, input:hover {
+    outline: none;
+    border-color: rgba(129, 140, 248);
+    background-color: #fff;
+    box-shadow: 0 0 0 5px rgb(129 140 248 / 30%);
+  }
 .marcas{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     backdrop-filter: blur(30px);
     border: solid;
     width: 97.vw;
@@ -26,34 +52,35 @@
     cursor: default;
     color: inherit;
 }
-body{
-    background-color: gray;
-/*
-    background-size: cover;
-    background-position: center;
-    animation: slider 10s linear infinite;
-}
-@keyframes slider{
-    0% {background-image: url(coche1.jpg);}
-    25% {background-image: url(coche2.jpg);}
-    50% {background-image: url(coche3.jpg);}
-    75% {background-image: url(coche4.jpeg);}
-    100% {background-image: url(coche1.jpg);}
-}
-*/
-.img-press{
+.full-width {
     width: 97.vw;
-    height: 50vh;
-    background-position: center;
+    height: 70vh;
     background-size: cover;
-    animation: slider 10s linear infinite;
+    background-position: center;
+    animation: slider 12s linear infinite;
+    display: flex;
+    align-items: end;
+    align-content: end;
 }
 @keyframes slider {
-    0% {background-image: url(coche1.jpg);}
-    25% {background-image: url(coche2.jpg);}
-    50% {background-image: url(coche3.jpg);}
-    75% {background-image: url(coche4.jpeg);}
-    100% {background-image: url(coche1.jpg);}
+    0% {background-image: url(p1.jpg);}
+    25% {background-image: url(p2.jpg);}
+    50% {background-image: url(p3.jpg);}
+    75% {background-image: url(porr.jpg);}
+    100% {background-image: url(p1.jpg);}
+}
+.title {
+    font-size: 2.5rem;
+    margin: 0;
+    color: #9e9e9e; font-size: 2rem;
+}
+.description {
+    color: #fff;
+    margin: 0 0 50px;
+    font-size: 1.2rem;
+}
+body{
+    background-color: gray;
 }
 h1{
     color: rgb(255, 255, 255);
@@ -62,12 +89,11 @@ h1{
     display: flex;
     width: 97.vw;
     height: 25vh;
-    border-radius: 15px;
     overflow: hidden;
     color: red;
 }
 .card1{
-    background-image: url(coche1.jpg);
+    background-image: url(bugat.webp);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -127,6 +153,7 @@ h1{
     position: relative;
     overflow: hidden;
     box-sizing: border-box;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.15);
 }
 .cart .imagen-box{
     width: 100%;
@@ -184,33 +211,20 @@ h1{
     transition: 0.5s ease-in-out;
     transform: translateY(20px);
 }
-.img-marc{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-    width: 80%;
-    margin: auto;
-}
 .present-marc{
-    backdrop-filter: blur(30px);
-    border: solid rgba(136, 136, 136, 0.339);
-    border-radius: 9px;
+    background-color: #ffffff;
+    border: solid rgba(84, 84, 84, 0.339);
+    height: 340px;
+}
+.img-marc {
+    display: flex;
+    justify-content: space-between;
 }
 .img-marc img{
-    border: solid rgba(95, 92, 92, 0.295);
-}
-.logo{
-    width: 50%;
-    height: auto;
-}
-.logo1{
-    width: 126px;
-    height: 146px;
-}
-.logo2{
-    width: 126px;
-    height: 146px;
+    border: solid rgba(128, 128, 128, 0.29);
+    width: 15%;
+    aspect-ratio: 6/3;
+    object-fit: contain;
 }
 .nombres{
     color: white;
@@ -221,4 +235,128 @@ h1{
     border-radius: 10px;
     width: 97.vw;
     height: 500px;
+}
+.car-marc {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 90px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding: 0;
+    padding: 50px;
+}
+.alignwide {
+    max-width: 900px;
+    margin: 0 auto;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.login-form {
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    padding: 30px;
+    border-radius: 16px;
+    backdrop-filter: blur(25px);
+    text-align: center;
+    color: white;
+    width: 1000px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.15);
+}
+.login-center {
+    display: flex;
+    justify-content: center;
+}
+.login-tittle {
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+.input-box {
+    margin: 20px 0;
+    position: relative;
+}
+.input-box input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    padding: 12px 12px 12px 45px;
+    border-radius: 99px;
+    outline: 3px solid transparent;
+    transition: 0.3s;
+    font-size: 17px;
+    color: white;
+    font-weight: 600;
+}
+.input-box input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 17px;
+    font-weight: 500;
+}
+.input-box input:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.3);
+}
+.input-box::-ms-reveal {
+    filter: invert(100%);
+}
+.input-box i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+.remember-forgot-box {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    font-size: 15px;
+}
+.remember-forgot-box label {
+    display: flex;
+    gap: 8px;
+    cursor: pointer;
+}
+.remember-forgot-box input {
+    accent-color: white;
+    cursor: pointer;
+}
+.remember-forgot-box a {
+    color: white;
+    text-decoration: none;
+}
+.remember-forgot-box a:hover {
+    text-decoration: underline;
+}
+.login-btn {
+    width: 100%;
+    padding: 10px 0;
+    background: #2f9cf4;
+    border: none;
+    border-radius: 99px;
+    color: white;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.login-btn:hover {
+    background: #0b87ec;
+}
+.register {
+    margin-top: 15px;
+    font-size: 15px;
+}
+.register a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+.register a:hover {
+    text-decoration: underline;
 }
