@@ -19,7 +19,7 @@
   }
   .input {
     width: 100%;
-    height: 25px;
+    height: 20px;
     line-height: 30px;
     padding: 0 5rem;
     padding-left: 3rem;
@@ -40,7 +40,7 @@
     display: flex;
     justify-content: space-around;
     backdrop-filter: blur(30px);
-    border: solid;
+
     width: 97.vw;
     height: 3vh;
     color: white;
@@ -72,7 +72,7 @@
 .title {
     font-size: 2.5rem;
     margin: 0;
-    color: #9e9e9e; font-size: 2rem;
+    color: #9e9e9e;
 }
 .description {
     color: #fff;
@@ -82,7 +82,7 @@
 body{
     background-color: gray;
 }
-h1{
+.cart-text{
     color: rgb(255, 255, 255);
 }
 .wrapper{
@@ -213,21 +213,26 @@ h1{
 }
 .present-marc{
     background-color: #ffffff;
-    border: solid rgba(84, 84, 84, 0.339);
     height: 340px;
+    width: 97.vw;
+}
+.present-marc h2 {
+    padding: 20px;
 }
 .img-marc {
+    width: 97.vw;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 .img-marc img{
-    border: solid rgba(128, 128, 128, 0.29);
+    border: solid rgba(128, 128, 128, 0.152);
     width: 15%;
     aspect-ratio: 6/3;
     object-fit: contain;
 }
 .nombres{
     color: white;
+    font-size: 1.5rem;
 }
 .inicio{
     background-color: white;
@@ -239,18 +244,24 @@ h1{
 .car-marc {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-around;
     gap: 90px;
 }
 .container {
-    max-width: 1200px;
+    width: 97.vw;
     margin: 0 auto;
     padding: 20px;
     padding: 0;
-    padding: 50px;
+    padding: 30px;
+    background-color: black;
 }
 .alignwide {
     max-width: 900px;
     margin: 0 auto;
+}
+.redes a {
+    text-decoration: none;
+    color: #9e9e9e;
 }
 * {
     margin: 0;
