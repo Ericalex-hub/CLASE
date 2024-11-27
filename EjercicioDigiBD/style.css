@@ -1,14 +1,24 @@
+body{
+    background-color: gray;
+}
 .cabecera{
     display: flex;
     justify-content: space-around;
     backdrop-filter: blur(30px);
     border: solid;
     color: rgb(255, 255, 255);
-    width: 97.vw;
+    width: 100%;
     height:3vh;
     position: sticky;
     top: 0;
     z-index: 10;
+}
+.sinsub{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    cursor: default;
+    color: inherit;
 }
 .group {
     display: flex;
@@ -40,20 +50,12 @@
     display: flex;
     justify-content: space-around;
     backdrop-filter: blur(30px);
-
-    width: 97.vw;
+    width: 100%;
     height: 3vh;
     color: white;
 }
-.sinsub{
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    cursor: default;
-    color: inherit;
-}
 .full-width {
-    width: 97.vw;
+    width: 100%;
     height: 70vh;
     background-size: cover;
     background-position: center;
@@ -79,18 +81,21 @@
     margin: 0 0 50px;
     font-size: 1.2rem;
 }
-body{
-    background-color: gray;
-}
-.cart-text{
-    color: rgb(255, 255, 255);
-}
 .wrapper{
     display: flex;
-    width: 97.vw;
+    width: 100%;
     height: 25vh;
     overflow: hidden;
     color: red;
+}
+.card{
+    flex: 1;
+    height: 100%;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+}
+.card:hover{
+    flex: 3;
 }
 .card1{
     background-image: url(bugat.webp);
@@ -116,15 +121,6 @@ body{
     background-size: cover;
     position: relative;
 }
-.text h1{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -85%);
-    text-align: center;
-    opacity: 0;
-    transition: 0.4s ease-in-out;
-}
 .card1:hover h1{
     opacity: 1;
 }
@@ -137,16 +133,52 @@ body{
 .card4:hover h1{
     opacity: 1;
 }
-.card{
-    flex: 1;
-    height: 100%;
-    transition: flex 0.5s ease;
-    cursor: pointer;
+.text h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -85%);
+    text-align: center;
+    opacity: 0;
+    transition: 0.4s ease-in-out;
 }
-.card:hover{
-    flex: 3;
+.cart-text{
+    color: rgb(255, 255, 255);
+}
+.present-marc{
+    background-color: #ffffff;
+    height: 340px;
+    width: 100%;
+}
+.present-marc h2 {
+    padding: 20px;
+}
+.img-marc {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.img-marc img{
+    border: solid rgba(128, 128, 128, 0.152);
+    width: 15%;
+    aspect-ratio: 6/3;
+    object-fit: contain;
+}
+.nombres{
+    color: white;
+    font-size: 1.5rem;
+    margin: 2%;
+}
+.car-marc {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+    margin: 100px;
 }
 .cart{
+    color: white;
     width: 500px;
     aspect-ratio: 1 / 0.7;
     border-radius: 9px;
@@ -169,7 +201,6 @@ body{
 }
 .cart::after{
     text-align: center;
-    content: "The lamborgini is a car very fast in the world";
     position: absolute;
     inset: 0;
     border: 2px solid white;
@@ -184,90 +215,55 @@ body{
     opacity: 1;
     inset: 40px;
 }
-.cart .cont{
+.cart .cont h2{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    text-align: center;
-    color: white;
-    opacity: 1;
-    transition: 0,5s ease-in-out;
 }
-.cart:hover .cont p
-.cart:hover .cont h2{
-    transform: translate(0);
-    opacity: 1;
-}
-.cart:hover h2{
-    margin: 0;
-    font-size: 24px;
-    scale: 0.9;
-}
-.cart:hover .cont p{
-    margin: 5px 0 0;
-    font-size: 16px;
+.cont a {
     opacity: 0;
-    transition: 0.5s ease-in-out;
-    transform: translateY(20px);
+    transition: 0.4s ease-in-out;
+    position: absolute;
+    top: 80%;
+    left: 42%;
+    background: transparent;
+    color: #fff;
+    border: none;
 }
-.present-marc{
-    background-color: #ffffff;
-    height: 340px;
-    width: 97.vw;
+.page1::after {
+    font-size: larger;
+    content: "|Year 2019 | Bugatti Chiron 110 ans | 3.857.225€ | 5k Km | Fuel type petrol";
 }
-.present-marc h2 {
-    padding: 20px;
+.page2::after {
+    font-size: large;
+    content: "|Year 2006 | Bugatti Veyron | 1.768.592€ | 5k Km | Fuel type petrol";
 }
-.img-marc {
-    width: 97.vw;
-    display: flex;
-    justify-content: space-around;
+.page3::after {
+    font-size: large;
+    content: "|Year 1996 | Bugatti EB 110 | Price on request | 10k Km | Fuel type petrol";
 }
-.img-marc img{
-    border: solid rgba(128, 128, 128, 0.152);
-    width: 15%;
-    aspect-ratio: 6/3;
-    object-fit: contain;
+.page4::after {
+    font-size: large;
+    content: "|Year 2009 | Bugatti Veyron | 1.497.493€ | 16k Km";
 }
-.nombres{
-    color: white;
-    font-size: 1.5rem;
+.page5::after {
+    content: "dsadsadsadasdd";
 }
-.inicio{
-    background-color: white;
-    border: solid;
-    border-radius: 10px;
-    width: 97.vw;
-    height: 500px;
+.page1:hover a {
+    opacity: 1;
 }
-.car-marc {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    gap: 90px;
+.page2:hover a {
+    opacity: 1;
 }
-.container {
-    width: 97.vw;
-    margin: 0 auto;
-    padding: 20px;
-    padding: 0;
-    padding: 30px;
-    background-color: black;
+.page3:hover a {
+    opacity: 1;
 }
-.alignwide {
-    max-width: 900px;
-    margin: 0 auto;
+.page4:hover a {
+    opacity: 1;
 }
-.redes a {
-    text-decoration: none;
-    color: #9e9e9e;
-}
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+.page5:hover a {
+    opacity: 1;
 }
 .login-form {
     border: 3px solid rgba(255, 255, 255, 0.3);
@@ -321,6 +317,28 @@ body{
     transform: translateY(-50%);
     font-size: 20px;
     color: rgba(255, 255, 255, 0.8);
+}
+.container {
+    width: 97.vw;
+    margin: 0 auto;
+    padding: 20px;
+    padding: 0;
+    padding: 30px;
+    background-color: black;
+}
+.alignwide {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.redes a {
+    text-decoration: none;
+    color: #9e9e9e;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 .remember-forgot-box {
     display: flex;
